@@ -21,6 +21,7 @@
     }
 
     function init() {
+	$('[data-toggle="popover"]').popover();
         $('#connect').on('click', connect);
         $('#disconnect').hide();
         $('#disconnect').on('click', disconnect);
