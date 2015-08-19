@@ -143,8 +143,10 @@
 
         for (i = 0, l = tweets.length; i < l; i++) {
             if ($.inArray(i, updates) === -1) {
+                // No update on tweet
                 var tweet = $('#tweets #' + i);
                 if (tweet.length === 0) {
+                    // tweet was not already displayed ==> show it
                     $('#tweets').append('<tr id="' + i + '">'
                     + '<td>' + tweets[i].text + '</td>'
                     + '<td>' + tweets[i].user.followers_count + '</td>'
@@ -152,11 +154,13 @@
                     + '</tr>');
 
                 } else {
+                    // tweet was already displayed, remove the highlight
                     tweet.removeClass('success');
 
                 }
 
             } else {
+                // Tweet updated : update data and highlight
                 $('#tweets #' + i).replaceWith(
                     '<tr id="' + i + '" class="success">'
                     + '<td>' + tweets[i].text + '</td>'
