@@ -11,7 +11,7 @@ You will also be asked to fill in your Twitter OAuth signature (as a HTTP header
 - log in with your Twitter account to https://apps.twitter.com
 - select your Twitter App or create one
 - click on the « Test OAuth » button
-- fill in the field « Request URI » with the Twitter url to be used in the sample (the sample default one is:  https://api.twitter.com/1.1/statuses/home_timeline.json)
+- fill in the field « Request URI » with the Twitter url to be used in the sample (the sample default one is:  https://api.twitter.com/1.1/statuses/user_timeline.json)
 - click on « Get OAuth Signature »
 - copy the generated « Authorization header » (```Authorization: OAuth oauth_consumer_key=... oauth_version="1.0"```) and paste it into the input of the sample named « Twitter Authorization Header »
 - click on the button « Connect »
